@@ -1,16 +1,19 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchStories } from "../actions";
+import Story from "./Story.js";
 
 class Stories extends Component {
   componentDidMount() {
     this.props.fetchStories();
   }
   render() {
-    console.log("this.props is: ", this.props.stories);
+    const { stories } = this.props.stories;
     return (
       <div>
-        <h1>Hi</h1>
+        {stories.map((story, i) => {
+          return <Story key={i} story={story} />;
+        })}
       </div>
     );
   }
