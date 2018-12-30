@@ -6,9 +6,12 @@ import "./Stories.css";
 
 class Stories extends Component {
   componentDidMount() {
-    this.props.fetchStories();
+    if (this.props.stories.stories.length < 20) {
+      this.props.fetchStories();
+    }
   }
   render() {
+    console.log("stories page: ", this.props.stories.stories);
     const { stories } = this.props.stories;
     return (
       <ol>

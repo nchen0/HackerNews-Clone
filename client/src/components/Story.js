@@ -1,7 +1,6 @@
 import React from "react";
 
 const Story = ({ story }) => {
-  console.log("story: ", story);
   return (
     <li>
       <a href={story.url}>{story.title}</a>

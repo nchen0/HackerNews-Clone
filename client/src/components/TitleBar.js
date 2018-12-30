@@ -7,7 +7,9 @@ export default class TitleBar extends Component {
     return (
       <div className="titleBar">
         <img className="logo" src="./img/y18.gif" />
-        <p className="title">Hacker News</p>
+        <Link to="/" className="title">
+          Hacker News
+        </Link>
         <Link to="/new" className="categories">
           new |
         </Link>
