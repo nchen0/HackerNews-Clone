@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchStories } from "../actions";
 import Story from "./Story.js";
+import "./Stories.css";
 
 class Stories extends Component {
   componentDidMount() {
