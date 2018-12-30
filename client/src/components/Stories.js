@@ -10,11 +10,11 @@ class Stories extends Component {
   render() {
     const { stories } = this.props.stories;
     return (
-      <div>
+      <ol>
         {stories.map((story, i) => {
           return <Story key={i} story={story} />;
         })}
-      </div>
+      </ol>
     );
   }
 }
